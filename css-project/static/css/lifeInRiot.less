@@ -1,410 +1,218 @@
+@font-family-base: "Mark Pro", Arial, sans-serif;
 @primary-color: #d13639;
 @secondary-color: #292929;
 @text-color: #f9f9f9;
 @hover-colors: #dec66e, #8bd48b, #6391d5, #ff9900, #814e9a;
-@font-family-base: "Mark Pro", Arial, sans-serif;
 
-@font-face {
-    font-family: 'Pacifico';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ96A.ttf) format('truetype');
-}
-
-:root {
-    --header-height: 3.5rem;
-    --border-section: 56px 56px 0 0;
-
-    /*========== Colors ==========*/
-    --first-color: hsl(12, 32%, 22%);
-    --first-color-alt: hsl(12, 42%, 12%);
-    --first-color-light: hsl(12, 24%, 32%);
-    --second-color: hsl(39, 62%, 65%);
-    --title-color: hsl(12, 12%, 16%);
-    --text-color: hsl(12, 12%, 32%);
-    --text-color-light: hsl(12, 8%, 48%);
-    --white-color: #fff;
-    --footer-color: #000;
-    /* Color del footer */
-    --header-color: #000;
-    /* Color del header */
-
-    /*========== Font and typography ==========*/
-    --body-font: "Poppins", sans-serif;
-    --second-font: "Pacifico", cursive;
-    --biggest-font-size: 2.75rem;
-    --big-font-size: 1.75rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
-
-    /*========== Font weight ==========*/
-    --font-regular: 400;
-    --font-medium: 500;
-    --font-semi-bold: 600;
-
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
-}
-
-/*========== Responsive typography ==========*/
-@media screen and (min-width: 1024px) {
-    :root {
-        --biggest-font-size: 4.5rem;
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: 0.875rem;
-        --smaller-font-size: 0.813rem;
-    }
-}
-
-/*=============== BASE ===============*/
 * {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
-}
-
-html {
-    scroll-behavior: smooth;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--white-color);
-    color: var(--text-color);
-    animation: fadeIn 0.5s ease-in-out;
-    /* Añadir animación de aparición */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ece8e1;
 }
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    transition: color 0.3s;
-    /* Suavizar el cambio de color en enlaces */
-}
-
-a:hover {
-    color: var(--first-color);
-    /* Cambiar color al pasar el mouse */
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-    max-width: 1120px;
-    margin-inline: 1.5rem;
-    /* margin right and left */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
-.section {
-    padding: 40px 20px;
-    /* Espaciado alrededor de la sección */
-    text-align: center;
-    /* Centrar el texto en la sección */
-    animation: slideIn 0.5s ease-out;
-    /* Añadir animación de deslizamiento */
-}
-
-/* Sección de carrusel de ubicaciones */
-.locations-carousel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.location {
-    display: none;
-    /* Oculta todas las ubicaciones inicialmente */
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.location img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s;
-    /* Suavizar la transformación */
-}
-
-.location:hover img {
-    transform: scale(1.1);
-    /* Aumentar el tamaño al pasar el mouse */
-}
-
-/*=============== HEADER ===============*/
 .header {
-    background-color: var(--header-color);
-    /* Color negro */
-    color: var(--white-color);
-    /* Color de texto blanco */
-    padding: 20px 0;
-    /* Espaciado alrededor del header */
-    text-align: center;
-    /* Centrar el texto */
-    position: relative;
-    /* Permitir posicionamiento relativo */
-    z-index: var(--z-fixed);
-    /* Asegurar que esté por encima de otros elementos */
-    animation: fadeIn 0.5s ease-in;
-    /* Añadir animación de aparición */
-}
-
-.header h1 {
-    margin: 0;
-    /* Sin margen en el título del header */
-    animation: fadeInDown 0.5s ease-in;
-    /* Añadir animación de aparición hacia abajo */
-}
-
-/*=============== CULTURE ===============*/
-.culture {
-    text-align: center;
-}
-
-.culture__title {
-    margin-bottom: 2rem;
-    font-weight: var(--font-medium);
-    animation: bounce 1s;
-    /* Añadir animación de rebote */
-}
-
-.culture__cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-/*=============== ABOUT ===============*/
-.about {
-    text-align: center;
-}
-
-.about__subtitle {
-    margin-bottom: 2rem;
-    font-weight: var(--font-medium);
-}
-
-.about__description {
-    margin-bottom: 2rem;
-}
-
-/* Nueva sección de Impacto Social */
-.impacto-social {
-    background-color: var(--white-color);
-    /* Fondo blanco */
-    color: var(--text-color);
-    /* Color de texto oscuro */
-    padding: 40px 20px;
-    /* Espaciado alrededor de la sección */
-    text-align: center;
-    /* Centrar el texto */
-    animation: fadeInUp 0.5s ease-in;
-    /* Añadir animación de aparición hacia arriba */
-}
-
-.impacto-social h2 {
-    font-size: var(--h2-font-size);
-    /* Tamaño de fuente para el título */
-    margin-bottom: 20px;
-    /* Espacio debajo del título */
-    animation: fadeInLeft 0.5s ease-in;
-    /* Animación de aparición desde la izquierda */
-}
-
-.impacto-social p {
-    font-size: var(--normal-font-size);
-    /* Tamaño de fuente para el párrafo */
-    margin-bottom: 20px;
-    /* Espacio debajo del párrafo */
-    animation: fadeInRight 0.5s ease-in;
-    /* Animación de aparición desde la derecha */
-}
-
-.impacto-social a {
-    display: inline-block;
-    /* Convertir el enlace en un bloque */
-    padding: 10px 20px;
-    /* Espaciado interno */
-    background-color: var(--first-color);
-    /* Fondo color primario */
-    color: var(--white-color);
-    /* Texto blanco */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    text-decoration: none;
-    /* Sin subrayado */
-    transition: background-color 0.3s, transform 0.3s;
-    /* Suavizar el cambio de color de fondo y transformación */
-    animation: pulse 1.5s infinite;
-    /* Añadir animación de pulsación */
-}
-
-.impacto-social a:hover {
-    background-color: var(--first-color-alt);
-    /* Fondo más oscuro al pasar el ratón */
-}
-
-/*=============== BUTTON ===============*/
-.button {
-    display: inline-flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lifeInRiot/riot.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    column-gap: 0.5rem;
-    background-color: var(--second-color);
-    padding: 1rem 1.5rem;
-    border-radius: 4rem;
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-    box-shadow: 0 8px 32px hsla(39, 62%, 65%, 0.25);
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    /* Suavizar el cambio de color y transformación */
-    animation: swing 1s infinite;
-    /* Añadir animación de oscilación */
+    padding: 2rem;
+
+    .header-content h1 {
+        font-size: 3.5rem;
+        color: white;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+        color: #ddd;
+        padding: 0 3rem;
+        margin-bottom: 2rem;
+        max-width: 800px;
+        font-weight: 400;
+    }
+
+    .btn-1 {
+        padding: 1rem 2.5rem;
+        background-color: gray;
+        color: white;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: blueviolet;
+            color: #f0f0f0;
+        }
+    }
 }
 
-.button i {
-    font-size: 1.5rem;
-}
-
-.button:hover {
-    background-color: hsl(39, 62%, 75%);
-    box-shadow: 0 12px 48px hsla(39, 62%, 75%, 0.35);
-    /* Aumentar la sombra al pasar el mouse */
-    transform: scale(1.05);
-    /* Aumentar el tamaño al pasar el mouse */
-}
-
-/*=============== FOOTER ===============*/
-.footer {
-    background-color: var(--footer-color);
-    /* Color negro */
-    color: var(--white-color);
-    /* Color de texto blanco */
-    padding: 20px 0;
-    /* Espaciado alrededor del footer */
+.riot,
+.beneficios {
+    padding: 4rem 0;
     text-align: center;
-    /* Centrar el texto */
-    animation: fadeIn 0.5s ease-in;
-    /* Añadir animación de aparición */
+
+    h2 {
+        font-size: 2.5rem;
+        color: blueviolet;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: black;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .riot-group {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap; // Permite que las tarjetas se adapten a la pantalla en dispositivos más pequeños
+
+        .riot-item {
+            width: 30%;
+            padding: 1.5rem;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 1rem 0;
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+            .riot-image {
+                background-image: url("../img/lifeInRiot/img2.jpg"); // Imagen específica para Riot
+                width: 100px;
+                height: 100px;
+                background-size: cover;
+                margin: 0 auto 1rem;
+                border-radius: 50%;
+            }
+
+            h3 {
+                color: #333;
+                margin-top: 1rem;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: #555;
+                font-weight: 400;
+            }
+
+        }
+    }
+
+    .beneficios-group {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .beneficio-item {
+            width: 30%;
+            padding: 1.5rem;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 1rem 0;
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+            .beneficio-image {
+                background-image: url("../img/lifeInRiot/img3.jpg"); // Imagen específica para Beneficios
+                width: 100px;
+                height: 100px;
+                background-size: cover;
+                margin: 0 auto 1rem;
+                border-radius: 50%;
+            }
+
+            h3 {
+                color: #333;
+                margin-top: 1rem;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: white;
+                font-weight: 400;
+            }
+        }
+    }
 }
 
-/*=============== ANIMATIONS ===============*/
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+
+.beneficios {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/lifeInRiot/health.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+
+    .beneficios-content {
+        text-align: center;
+
+        h2 {
+            font-size: 55px;
+            line-height: 70px;
+            color: white;
+            margin-bottom: 50px;
+            padding: 0 100px;
+        }
     }
 
-    to {
-        opacity: 1;
-    }
-}
+    .beneficios-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
 
-@keyframes slideIn {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
+        .beneficio-1 {
+            padding: 0 100px;
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+            .beneficio-image {
+                background-image: url("../img/lifeInRiot/health.jpg");
+                width: 25px;
+                height: 25px;
+                background-size: cover;
+            }
 
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        transform: translateX(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        transform: translateX(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-@keyframes swing {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(10deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
+            h3 {
+                color: white;
+                font-size: 18px;
+            }
+        }
     }
 }
 
@@ -418,7 +226,9 @@ img {
     transition: background-color 0.3s ease;
 }
 
-header {
+
+// Header styles
+.main-header {
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -521,28 +331,6 @@ header {
             height: 3px;
             background-color: #f9f9f9;
             margin: 2px 0;
-        }
-    }
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-
-    .language-select {
-        background-color: transparent;
-        color: @text-color;
-        border: none;
-        margin-right: 1rem;
-    }
-
-    .login-btn {
-        .button-style();
-        background-color: @primary-color;
-        color: @text-color;
-
-        &:hover {
-            background-color: darken(@primary-color, 10%);
         }
     }
 }
