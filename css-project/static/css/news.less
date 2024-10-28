@@ -1,0 +1,607 @@
+@font-family-base: "Mark Pro", Arial, sans-serif;
+@hover-colors: #dec66e, #8bd48b, #6391d5, #ff9900, #814e9a;
+@primary-color: #d13639;
+@secondary-color: #292929;
+@text-color: #f9f9f9;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondoPadre {
+    background: #ece8e1 no-repeat;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+img {
+    border-radius: 30px;
+}
+
+.contenedorTarjetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    justify-content: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+
+    &-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+
+        &:hover {
+            transform: rotateY(180deg);
+        }
+    }
+
+    &-front,
+    &-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-back {
+        transform: rotateY(180deg);
+    }
+}
+
+.imagen1 {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.carousel-container {
+    width: 25%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    width: calc(100% * 10);
+    animation: moveSlides 20s linear infinite;
+
+    figure {
+        width: 20%; // Cada figura ocupa el 20% del ancho del carrusel
+        margin: 0; // Asegúrate de que no haya márgenes adicionales
+    }
+
+    img {
+        width: 100%; // Asegúrate de que la imagen llena la figura
+        border-radius: 10px;
+        display: block;
+    }
+}
+
+@keyframes moveSlides {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+body {
+    font-family: @font-family-base;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url(../img/news/compe2.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: red;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.letrasLindas {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: red;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    background-color: #2a2a2a;
+}
+
+.cta-button {
+    background-color: red;
+    color: #1c1c1c;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #ffc74f;
+    }
+}
+
+.news-section {
+    padding: 50px 20px;
+    background-color: #2a2a2a;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: red;
+    }
+
+    .news-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
+        .news-card {
+            background-color: #333;
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            justify-content: center;
+
+            &:hover {
+                transform: translateY(-50px);
+            }
+
+            img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+            }
+
+            h3 {
+                padding: 15px;
+                font-size: 1.4rem;
+                color: red;
+            }
+
+            p {
+                padding: 0 15px 20px;
+                color: #ccc;
+                font-size: 1rem;
+            }
+
+            a {
+                display: block;
+                padding: 10px;
+                background-color: red;
+                color: #1c1c1c;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                text-decoration: none;
+                border-radius: 0 0 10px 10px;
+
+                &:hover {
+                    background-color: #ffc74f;
+                }
+            }
+        }
+    }
+}
+
+.imagenParaContenedor1,
+.imagenParaContenedor2,
+.imagenParaContenedor3,
+.imagenParaContenedor4 {
+    width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.imagenParaContenedor1 {
+        background: url('../img/news/AtrasCarta1.png');
+    }
+
+    &.imagenParaContenedor1-1 {
+        background: url('../img/news/imagenDelantera1.png');
+    }
+
+    &.imagenParaContenedor2 {
+        background: url('../img/news/AtrasCarta2.png');
+    }
+
+    &.imagenParaContenedor2-1 {
+        background: url('../img/news/imagenDelantera2.png');
+    }
+
+    &.imagenParaContenedor3 {
+        background: url('../img/news/AtrasCarta3.png');
+    }
+
+    &.imagenParaContenedor3-1 {
+        background: url('../img/news/imagenDelantera3.png');
+    }
+
+    &.imagenParaContenedor4 {
+        background: url('../img/news/AtrasCarta4.png');
+    }
+
+    &.imagenParaContenedor4-1 {
+        background: url('../img/news/imagenDelantera4.png');
+    }
+}
+
+.imagenNoticia1,
+.imagenNoticia2,
+.imagenNoticia3 {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+
+    &.imagenNoticia1 {
+        background: url('../img/news/compe.jpg');
+    }
+
+    &.imagenNoticia2 {
+        background: url('../img/news/clanes.jpeg');
+    }
+
+    &.imagenNoticia3 {
+        background: url('../img/news/sombra.jpg');
+    }
+}
+
+.news-carousel {
+    overflow: hidden;
+    width: 100%;
+    background-color: #2a2a2a;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .carousel-track {
+        display: flex;
+        gap: 20px;
+        animation: slide 25s linear infinite;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    16% {
+        transform: translateX(-350px);
+    }
+
+    32% {
+        transform: translateX(350px);
+    }
+
+    48% {
+        transform: translateX(-350px);
+    }
+
+    64% {
+        transform: translateX(350px);
+    }
+
+    80% {
+        transform: translateX(-350px);
+    }
+
+    100% {
+        transform: translateX(350px);
+    }
+}
+
+.textoCentrado {
+    text-align: center;
+}
+
+.button-style() {
+    font-family: @font-family-base;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+// Header styles
+header {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: rgba(168, 35, 35, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1px;
+
+        .logo {
+            .logo-svg {
+                fill: #f9f9f9;
+                display: block;
+                height: 70px;
+                width: 100px;
+                background-image: url('../img/home/riot-logo.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 1rem;
+                position: relative;
+
+                a {
+                    font-weight: bold;
+                    position: relative;
+                    z-index: 2;
+                    color: @text-color;
+                    text-decoration: none;
+                    padding: 0.5rem 1rem;
+                    transition: color 0.3s ease;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: transparent;
+                        z-index: -1;
+                        transform: scaleY(0);
+                        transform-origin: bottom;
+                        transition: transform 0.3s ease;
+                    }
+
+                    &:hover {
+                        &::before {
+                            transform: scaleY(1);
+                        }
+
+                        color: #000; // Nuevo: Cambia el color del texto a negro en hover
+                    }
+                }
+
+                .generate-hover-colors(@i) when (@i > 0) {
+                    &:nth-child(@{i}) {
+                        a::before {
+                            background-color: extract(@hover-colors, @i);
+                        }
+                    }
+
+                    .generate-hover-colors(@i - 1);
+                }
+
+                .generate-hover-colors(length(@hover-colors));
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        span {
+            width: 25px;
+            height: 3px;
+            background-color: #f9f9f9;
+            margin: 2px 0;
+        }
+    }
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+
+    .language-select {
+        background-color: transparent;
+        color: @text-color;
+        border: none;
+        margin-right: 1rem;
+    }
+
+    .login-btn {
+        .button-style();
+        background-color: @primary-color;
+        color: @text-color;
+
+        &:hover {
+            background-color: darken(@primary-color, 10%);
+        }
+    }
+}
+
+// Footer
+footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    .logo {
+        .logo-svg {
+            fill: #f9f9f9;
+            display: block;
+            height: 70px;
+            width: 100px;
+            background-image: url('../img/home/riot-logo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    background-color: @secondary-color;
+    padding: 2rem;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+
+        .footer-logo img {
+            height: 50px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 0.5rem;
+
+                    a {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .social-media {
+            a {
+                margin-right: 1rem;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1rem;
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin-left: 1rem;
+
+                a {
+                    font-size: 0.9rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

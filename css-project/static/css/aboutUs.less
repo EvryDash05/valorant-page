@@ -1,0 +1,573 @@
+@font-family-base: "Mark Pro", Arial, sans-serif;
+@color-text: #333;
+@color-selection-text: #e7e6e3;
+@color-selection-bg: #d1363a;
+@color-bg-dark: #252423;
+@color-h3-bg: red;
+@color-dot-active: #717171;
+@font-size-h1: 70px;
+@line-height-h1: 72px;
+@font-size-h3: 24px;
+@line-height-h3: 24px;
+@font-size-p: 22px;
+@line-height-p: 22px;
+@font-size-h2: 42px;
+@line-height-h2: 44px;
+@font-size-btn: 16px;
+@padding-base: 20px;
+@border-radius-base: 10px;
+@border-radius-btn: 30px;
+@hover-colors: #dec66e, #8bd48b, #6391d5, #ff9900, #814e9a;
+@primary-color: #d13639;
+@secondary-color: #292929;
+@text-color: #f9f9f9;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: @font-family-base;
+  line-height: 1.6;
+  color: @color-text;
+}
+
+::selection {
+  color: @color-selection-text;
+  background: @color-selection-bg;
+  text-shadow: none;
+}
+
+.section.values {
+  background: @color-bg-dark;
+}
+
+.container-values {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 0;
+}
+
+.slide.active {
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+.content-slide {
+  position: absolute;
+  color: @color-selection-text;
+  padding: @padding-base;
+  border-radius: @border-radius-base;
+  max-width: 50%;
+}
+
+.content-slide h1 {
+  font-size: @font-size-h1;
+  line-height: @line-height-h1;
+  padding: @padding-base;
+}
+
+.content-slide h3 {
+  font-size: @font-size-h3;
+  line-height: @line-height-h3;
+  font-weight: 600;
+  background-color: @color-h3-bg;
+  padding: 10px;
+  color: white;
+  margin: 0 315px;
+}
+
+.content-slide p {
+  letter-spacing: 0.015em;
+  font-size: @font-size-p;
+  line-height: @line-height-p;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.slide1 {
+  background-image: url("../img/aboutUs/SomosJugadores.png");
+}
+
+.slide2 {
+  background-image: url("../img/aboutUs/NuestrosJuegos.jpg");
+}
+
+.slide3 {
+  background-image: url("../img/aboutUs/Sueños.jpg");
+}
+
+.slide4 {
+  background-image: url("../img/aboutUs/LargoPlazo.png");
+}
+
+.slide5 {
+  background-image: url("../img/aboutUs/UnSoloRiot.jpeg");
+}
+
+.slide1,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+
+h3,
+h1 {
+  text-transform: uppercase;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  top: 95%;
+  text-align: center;
+  z-index: 2;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: @color-selection-text;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: @color-dot-active;
+}
+
+.dot:hover {
+  background-color: @color-bg-dark;
+}
+
+.section.company {
+  display: grid;
+  background: @color-selection-text;
+  height: 500px;
+  align-content: center;
+}
+
+.container-company {
+  display: flex;
+  height: 500px;
+  align-items: center;
+  justify-content: space-between;
+  padding: @padding-base;
+  margin: 0 300px;
+}
+
+.puñito {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  align-content: center;
+}
+
+.img-puñito {
+  background-image: url("../img/aboutUs/QuienesSomos.png");
+  max-width: 95%;
+  height: 75%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.texto-puñito {
+  max-width: 50%;
+  height: 100%;
+  align-content: center;
+}
+
+.texto-puñito h2 {
+  text-transform: uppercase;
+  font-size: @font-size-h2;
+  line-height: @line-height-h2;
+  padding-bottom: 24px;
+}
+
+.texto-puñito p {
+  max-width: 550px;
+  letter-spacing: 0.015em;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.section {
+  transition: all 0.3s ease-in-out;
+}
+
+.section.company:hover {
+  background-color: @color-bg-dark;
+  color: @color-selection-text;
+}
+
+.section.company:hover .img-puñito {
+  opacity: 0.7;
+}
+
+.section.offices {
+  height: 500px;
+}
+
+.container-offices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.img-fondo {
+  background-image: url("../img/aboutUs/FondoTextura.jpeg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-fondo {
+  color: @color-selection-text;
+  position: absolute;
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.content-fondo h2 {
+  font-size: @line-height-h2;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.content-fondo p {
+  letter-spacing: 0.015em;
+  font-size: 18px;
+  line-height: 27px;
+  color: @color-selection-text;
+}
+
+.btn-offices {
+  padding-top: @padding-base;
+  overflow: hidden;
+  position: relative;
+  margin: -10px;
+}
+
+.btn-offices a {
+  margin: 10px;
+  z-index: 2;
+  padding: 10px @padding-base;
+  border: 1px solid @color-selection-text;
+  background-color: transparent;
+  color: @color-selection-text;
+  text-decoration: none;
+  border-radius: @border-radius-btn;
+  font-size: @font-size-btn;
+  display: inline-block;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.btn-offices a:hover {
+  background-color: @color-selection-bg;
+  color: #000;
+  border: 1px solid @color-selection-bg;
+}
+
+@media (max-width: 1660px) {
+  .content-slide h3 {
+    font-size: @font-size-h3;
+    line-height: @line-height-h3;
+    font-weight: 600;
+    background-color: @color-h3-bg;
+    padding: 10px;
+    color: white;
+    margin: 0 auto;
+  }
+
+  .container-company {
+    display: flex;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
+    padding: @padding-base;
+    margin: 0 0;
+  }
+}
+
+// Header styles
+header {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background-color: rgba(168, 35, 35, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+
+    .logo {
+      .logo-svg {
+        fill: #f9f9f9;
+        display: block;
+        height: 70px;
+        width: 100px;
+        background-image: url('../img/home/riot-logo.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 1rem;
+        position: relative;
+
+        a {
+          font-weight: bold;
+          position: relative;
+          z-index: 2;
+          color: @text-color;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          transition: color 0.3s ease;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+            z-index: -1;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover {
+            &::before {
+              transform: scaleY(1);
+            }
+
+            color: #000; // Nuevo: Cambia el color del texto a negro en hover
+          }
+        }
+
+        .generate-hover-colors(@i) when (@i > 0) {
+          &:nth-child(@{i}) {
+            a::before {
+              background-color: extract(@hover-colors, @i);
+            }
+          }
+
+          .generate-hover-colors(@i - 1);
+        }
+
+        .generate-hover-colors(length(@hover-colors));
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background-color: #f9f9f9;
+      margin: 2px 0;
+    }
+  }
+}
+
+.button-style() {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+
+  .language-select {
+    background-color: transparent;
+    color: @text-color;
+    border: none;
+    margin-right: 1rem;
+  }
+
+  .login-btn {
+    .button-style();
+    background-color: @primary-color;
+    color: @text-color;
+
+    &:hover {
+      background-color: darken(@primary-color, 10%);
+    }
+  }
+}
+
+// Footer
+footer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  .logo {
+    .logo-svg {
+      fill: #f9f9f9;
+      display: block;
+      height: 70px;
+      width: 100px;
+      background-image: url('../img/home/riot-logo.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  background-color: @secondary-color;
+  padding: 2rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    .footer-logo img {
+      height: 50px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .social-media {
+      a {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin-left: 1rem;
+
+        a {
+          font-size: 0.9rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

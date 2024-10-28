@@ -1,0 +1,677 @@
+// Variables
+@color-background: #e7e6e3;
+@primary-color: #d13639;
+@secondary-color: #292929;
+@text-color: #f9f9f9;
+@color-primary: #252423;
+@color-secondary: #d1363a;
+@color-text: #e7e6e3;
+@color-text-dark: #2b2a29;
+@font-family: 'Mark Pro', Arial, sans-serif;
+@font-size-base: 1em;
+@font-size-large: 5rem;
+@font-size-medium: 1.375rem;
+@font-size-small: 1.25rem;
+@font-weight-bold: 800;
+@font-weight-medium: 700;
+@font-weight-normal: 400;
+@margin-large: 100px;
+@margin-medium: 40px;
+@padding-large: 40px;
+@transition-duration: 0.5s;
+@transition-ease: ease;
+@hover-colors: #dec66e, #8bd48b, #6391d5, #ff9900, #814e9a;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: @color-background;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: @font-size-base;
+    font-family: @font-family;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+::selection {
+    color: @color-background;
+    background: @color-secondary;
+    text-shadow: none;
+}
+
+p,
+h1,
+h2,
+h3,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.portada {
+    position: relative;
+    width: 100vw; // Ancho completo del viewport
+    height: 70vh; // 70% del viewport
+    background: @color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.img-portada {
+    background-image: url("../img/impact/Portada.jpeg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    transition: opacity @transition-duration @transition-ease;
+}
+
+.content-portada {
+    position: relative;
+    z-index: 2;
+    color: @color-text;
+    text-align: center;
+    max-width: 600px;
+    transition: transform @transition-duration @transition-ease;
+}
+
+/* Efecto al pasar el mouse sobre la imagen */
+.portada:hover .content-portada {
+    transform: scale(1.175); // Aumentar el tamaño del texto
+}
+
+.portada:hover .img-portada {
+    opacity: 0.15; // Aumentar la opacidad del fondo
+}
+
+.content-portada h1 {
+    color: @color-text;
+    margin-top: @margin-medium;
+    font-size: @font-size-large;
+    line-height: 1.1;
+    font-weight: @font-weight-bold;
+}
+
+.content-portada p {
+    font-size: @font-size-medium;
+    line-height: 1.636;
+    margin-top: 10px;
+    color: @color-text;
+}
+
+.eyebrow {
+    font-weight: @font-weight-medium;
+    font-size: .875rem;
+    line-height: 1.429;
+    letter-spacing: .12em;
+    position: relative;
+    color: @color-text;
+    display: inline-block;
+    padding: 5px 15px 5px;
+    text-transform: uppercase;
+}
+
+.eyebrow span {
+    position: relative;
+}
+
+.eyebrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: @color-secondary;
+}
+
+.muchotexto {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content-muchotexto {
+    font-size: @font-size-medium;
+    line-height: 1.636;
+    color: @color-text-dark;
+    font-weight: @font-weight-normal;
+    letter-spacing: -0.0@font-size-base;
+    padding: 0px @padding-large;
+    max-width: 953.333px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.content-muchotexto h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 1.357;
+    margin-top: 80px;
+    font-weight: @font-weight-bold;
+}
+
+.content-muchotexto p {
+    margin-top: 20px;
+}
+
+.pilares {
+    display: flex;
+    justify-content: space-between;
+    margin: @margin-large @margin-medium;
+    flex-wrap: wrap;
+}
+
+.content-pilares {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 columnas
+    gap: @margin-medium;
+    width: 100%;
+    margin: auto 260px;
+}
+
+.content-pilares h3 {
+    font-size: @font-size-small;
+    line-height: 1.4;
+    font-weight: @font-weight-medium;
+    letter-spacing: .0@font-size-base;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+}
+
+.content-pilares p {
+    display: inline-block;
+    text-decoration: none !important;
+    font-size: 1.125rem;
+    line-height: 1.667;
+    max-width: 300px;
+    justify-items: center;
+}
+
+.pilar-edu,
+.pilar-ciud,
+.pilar-oport,
+.pilar-sost {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px 0px;
+    max-width: 290px;
+}
+
+.img-educacion,
+.img-ciudadania,
+.img-oportunidades,
+.img-sostenibilidad {
+    width: 100%;
+    height: 151.73px;
+    max-width: 270px;
+    margin-bottom: 38px;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-educacion {
+    background-image: url("../img/impact/Educación.jpg");
+}
+
+.img-ciudadania {
+    background-image: url("../img/impact/Ciudadanía.jpg");
+}
+
+.img-oportunidades {
+    background-image: url("../img/impact/Oportunidades.jpg");
+}
+
+.img-sostenibilidad {
+    background-image: url("../img/impact/Sostenibilidad.jpg");
+}
+
+.eyebrow-grid {
+    position: relative;
+    font-weight: @font-weight-medium;
+    font-size: .688rem;
+    line-height: 1.364;
+    height: 20px;
+    width: 30px;
+    color: @color-text;
+    background-color: @color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.eyebrow-grid span {
+    display: inline-block;
+}
+
+.tittle-iniciativas {
+    font-size: 2.75em;
+    font-weight: @font-weight-bold;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.iniciativas {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    background-color: @color-background;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carrusel-iniciativas {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    justify-content: center; // Centrar el contenido del carrusel
+    align-items: center;
+}
+
+.slider-section {
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    justify-content: center; // Centrar la imagen dentro del contenedor
+    align-items: center;
+}
+
+.img-socialimpactfund,
+.img-recaudaciones,
+.img-equidadracial {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.img-socialimpactfund {
+    background-image: url("../img/impact/Social-Impact-Fund.jpg");
+}
+
+.img-recaudaciones {
+    background-image: url("../img/impact/recaudaciones.jpg");
+}
+
+.img-equidadracial {
+    background-image: url("../img/impact/EquidadRacial.jpg");
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0, -50%);
+    transition: .5s @transition-ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+.content-slider {
+    padding: @padding-large;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1));
+}
+
+.content-slider h3 {
+    font-size: 4rem;
+    line-height: 1.227;
+    font-weight: @font-weight-bold;
+    white-space: pre-wrap;
+    position: relative;
+    margin-top: 10px;
+    color: @color-text !important;
+}
+
+.btn-slider {
+    padding-top: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: -10px;
+}
+
+.btn-slider a {
+    margin: 10px;
+    z-index: 2;
+    padding: 10px 20px;
+    border: 1px solid @color-background;
+    background-color: transparent;
+    color: @color-text;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    display: inline-block;
+    transition: background-color 0.3s @transition-ease, color 0.3s @transition-ease;
+}
+
+.btn-slider a:hover {
+    background-color: @color-background;
+    color: #000;
+}
+
+.content-slider {
+    display: none;
+    /* Oculta todos los contenidos por defecto */
+}
+
+.slider-section.active .content-slider {
+    display: block;
+    /* Muestra solo el contenido del slider activo */
+}
+
+.Premios {
+    margin-top: @margin-large;
+    margin-bottom: 70px;
+    font-size: @font-size-medium;
+    line-height: 1.636;
+    max-width: 953.333px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Premios h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.Premios ul {
+    align-items: center;
+    display: table;
+    margin: 20px;
+}
+
+.Premios li {
+    margin-left: 25px;
+    padding-left: 20px;
+}
+
+// Header styles
+header {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: rgba(168, 35, 35, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1px;
+
+        .logo {
+            .logo-svg {
+                fill: #f9f9f9;
+                display: block;
+                height: 70px;
+                width: 100px;
+                background-image: url('../img/home/riot-logo.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 1rem;
+                position: relative;
+
+                a {
+                    font-weight: bold;
+                    position: relative;
+                    z-index: 2;
+                    color: @text-color;
+                    text-decoration: none;
+                    padding: 0.5rem 1rem;
+                    transition: color 0.3s ease;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: transparent;
+                        z-index: -1;
+                        transform: scaleY(0);
+                        transform-origin: bottom;
+                        transition: transform 0.3s ease;
+                    }
+
+                    &:hover {
+                        &::before {
+                            transform: scaleY(1);
+                        }
+
+                        color: #000; // Nuevo: Cambia el color del texto a negro en hover
+                    }
+                }
+
+                .generate-hover-colors(@i) when (@i > 0) {
+                    &:nth-child(@{i}) {
+                        a::before {
+                            background-color: extract(@hover-colors, @i);
+                        }
+                    }
+
+                    .generate-hover-colors(@i - 1);
+                }
+
+                .generate-hover-colors(length(@hover-colors));
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        span {
+            width: 25px;
+            height: 3px;
+            background-color: #f9f9f9;
+            margin: 2px 0;
+        }
+    }
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+
+    .language-select {
+        background-color: transparent;
+        color: @text-color;
+        border: none;
+        margin-right: 1rem;
+    }
+
+    .login-btn {
+        .button-style();
+        background-color: @primary-color;
+        color: @text-color;
+
+        &:hover {
+            background-color: darken(@primary-color, 10%);
+        }
+    }
+}
+
+
+.button-style() {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    .logo {
+        .logo-svg {
+            fill: #f9f9f9;
+            display: block;
+            height: 70px;
+            width: 100px;
+            background-image: url('../img/home/riot-logo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    background-color: @secondary-color;
+    padding: 2rem;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+
+        .footer-logo img {
+            height: 50px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 0.5rem;
+
+                    a {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .social-media {
+            a {
+                margin-right: 1rem;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1rem;
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin-left: 1rem;
+
+                a {
+                    font-size: 0.9rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

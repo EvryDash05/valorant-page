@@ -1,0 +1,253 @@
+// Variables
+@primary-color: #d13639;
+@secondary-color: #292929;
+@text-color: #f9f9f9;
+@background-color: #000;
+
+// Mixins
+.flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-style() {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: @background-color;
+    color: @text-color;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: @text-color;
+}
+
+// Main content styles
+main {
+    background-color: #f9f9f9;
+
+    padding-top: 80px; // To account for fixed header
+
+    section {
+        padding: 4rem 2rem;
+    }
+
+    h1,
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        max-width: 800px;
+        margin: 0 auto 2rem;
+    }
+}
+
+/* Heder styles */
+header {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    background-color: rgba(178, 98, 98, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1px;
+
+        .logo {
+            .logo-svg {
+                fill: #f9f9f9;
+                display: block;
+                height: 70px;
+                width: 100px;
+                background-image: url('../img/home/riot-logo.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &:hover {
+                    transform: scale(1.1); // Efecto hover para agrandar el logo
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    font-weight: bold;
+
+                    &:hover {
+                        color: @primary-color;
+                    }
+                }
+            }
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+
+            .language-select {
+                background-color: transparent;
+                color: @text-color;
+                border: none;
+                margin-right: 1rem;
+            }
+
+            .login-btn {
+                .button-style();
+                background-color: @primary-color;
+                color: @text-color;
+
+                &:hover {
+                    background-color: darken(@primary-color, 10%);
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    background-image: url('/static/img/diversity/diversity.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    .flex-center();
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.mission,
+.commitment {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.initiatives {
+    .initiative-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .initiative-card {
+        background-color: @secondary-color;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+        }
+
+        h3,
+        p {
+            padding: 1rem;
+        }
+    }
+}
+
+.cta-button {
+    .button-style();
+    display: inline-block;
+    background-color: @primary-color;
+    color: @text-color;
+    font-size: 1.1rem;
+
+    &:hover {
+        background-color: darken(@primary-color, 10%);
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+
+        .nav-links,
+        .nav-right {
+            margin-top: 1rem;
+        }
+    }
+
+    .hero {
+        height: 400px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        >* {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+
+        ul {
+            margin-top: 1rem;
+        }
+    }
+}

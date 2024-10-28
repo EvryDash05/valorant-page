@@ -1,0 +1,262 @@
+@background-color: #000000; // Negro
+@background-colot-plomito: #808080;
+@link-color: #ffffff; // Blanco
+@hover-color: #ff0000; // Rojo
+@border-color: #ccc; // Color del borde
+@input-border-color: #ff0000; // Rojo para el borde del input
+@login-bg-color: #ff0000; // Rojo para el botón
+@login-hover-bg-color: darkred; // Rojo oscuro al pasar el mouse
+@searxh-text-color: black;
+@font-family: 'Helvetica, Arial, sans-serif';
+@footer-bg-color: @background-color; // Negro
+@footer-text-color: @link-color; // Blanco
+@footer-hover-color: @hover-color; // Rojo
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // Asegura que el padding y border no expandan el tamaño de los elementos
+    font-family: @font-family;
+}
+
+* {
+    box-sizing: inherit; // Todos los elementos heredan el box-sizing del body
+}
+
+header {
+    background-color: @background-color;
+    width: 100%; // Ocupar todo el ancho
+    padding: 10px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            width: 100%; // Ocupar todo el ancho
+
+            li {
+                margin: 0 15px;
+
+                a {
+                    text-decoration: none;
+                    color: @link-color;
+                    font-weight: bold;
+
+                    &:hover {
+                        color: @hover-color;
+                    }
+                }
+
+                /* Estilo para las imágenes */
+                .nav-image {
+                    max-height: 40px; // Limita la altura de las imágenes para que no excedan la barra
+                    margin-right: 10px; // Espacio entre las imágenes y el enlace
+                    width: auto; // Mantiene la proporción de la imagen
+                }
+
+                .search-input {
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                    border: 1px solid @border-color;
+                    outline: none;
+                    transition: border-color 0.3s;
+                    color: @searxh-text-color; // Texto blanco en el input
+                    margin-left: 550px;
+
+                    &:focus {
+                        border-color: @input-border-color;
+                    }
+                }
+
+                .login-button {
+                    border-radius: 20px;
+                    padding: 5px 15px;
+                    border: none;
+                    background-color: @login-bg-color;
+                    color: white;
+                    cursor: pointer;
+                    font-weight: bold;
+
+                    &:hover {
+                        background-color: @login-hover-bg-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.image-section {
+    position: relative;
+    text-align: center;
+    margin-top: -10px; // Eliminar el espacio blanco entre la barra y la imagen
+
+    .convencion-image {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    // Ajusta el título, subtítulo y texto para que aparezcan sobre la imagen
+    .title,
+    .subtitle,
+    .text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); // Centrar horizontalmente
+        color: white; // Texto blanco para destacar sobre la imagen
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); // Sombra para mejorar la legibilidad
+    }
+
+    .title {
+        top: 20%; // Ajusta la posición vertical
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        top: 35%; // Ajusta la posición vertical
+        font-size: 2em;
+    }
+
+    .text {
+        top: 50%; // Ajusta la posición vertical
+        font-size: 1.2em;
+        max-width: 800px;
+        margin: 0 auto; // Centrar el texto
+    }
+
+    // Estilos para los enlaces de mensajes
+    .message-nav {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        padding: 0 10px;
+
+        a {
+            background-color: transparent;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 1em;
+            text-align: center;
+            text-decoration: none;
+            min-width: 150px;
+            max-width: 180px;
+
+            &:hover {
+                background-color: rgba(255, 0, 0, 0.8);
+                color: white;
+            }
+        }
+    }
+
+}
+
+.black-section {
+    background-color: @background-colot-plomito; // Negro
+    display: flex;
+    justify-content: space-around; // Distribuye el espacio entre los elementos
+    padding: 20px 0; // Espacio vertical
+    margin-top: -10px;
+
+    .black-item {
+        color: white; // Texto blanco
+        width: 23%; // Cada artículo ocupa un 23% del ancho total, dejando espacio entre ellos
+        text-align: center; // Centrar texto
+
+        .black-title {
+            font-size: 1.5em; // Tamaño de título
+            margin: 0 0 10px 0; // Margen inferior
+        }
+
+        .black-text {
+            font-size: 1em; // Tamaño de texto
+        }
+    }
+}
+
+.footer {
+    background-color: @footer-bg-color;
+    color: @footer-text-color;
+    padding: 20px 0;
+    text-align: center;
+
+    .logo {
+        .logo-svg {
+            fill: #f9f9f9;
+            display: block;
+            height: 70px;
+            width: 100px;
+            background-image: url('../img/home/riot-logo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .social-icons {
+            a {
+                color: @footer-text-color;
+                font-size: 1.5em;
+                margin: 0 10px;
+
+                &:hover {
+                    color: @footer-hover-color;
+                }
+            }
+        }
+
+        .footer-links {
+            a {
+                color: @footer-text-color;
+                margin: 0 10px;
+                text-decoration: none;
+
+                &:hover {
+                    color: @footer-hover-color;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 10px;
+        font-size: 0.9em;
+    }
+}
+
+.who-are {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    aspect-ratio: 1;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
