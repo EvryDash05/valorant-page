@@ -1,0 +1,46 @@
+.bg-oracle-red { 
+    background-color: #f80000; }
+.sombra-todo { 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); }
+.sombra-bottom { 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); }
+.sombra-texto { 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+#oracleCarousel { 
+    max-height: 500px; overflow: hidden; }
+.carousel-item {
+    height: 500px; /* Asegura que el carrusel tenga altura fija */
+}
+
+figure {
+    height: 100%; /* Asegura que el figure ocupe todo el alto del carrusel */
+    margin: 0;
+    display: block;
+}
+
+.foto1 {
+    background-image: url('../img/news/autonomo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.foto2 {
+    background-image: url('../img/news/Expansion.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.foto3 {
+    background-image: url('../img/news/fusion2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px; /* Ajusta el tamaño en pantallas pequeñas */
+    }
+}
