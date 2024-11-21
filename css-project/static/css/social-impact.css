@@ -1,0 +1,115 @@
+body {
+  background-color: #f5f4f2;
+}
+
+.substyle {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2rem; /* Tamaño más pequeño que el título */
+  font-weight: 500; /* Semi-negrita */
+  color: #000000; /* Un tono más claro que el título */
+  line-height: 1.5; /* Más espacio para legibilidad */
+}
+
+.substyle::after {
+  content: "";
+  display: block;
+  width: 100px; /* Largo de la línea */
+  height: 4px; /* Grosor de la línea */
+  background-color: #f0cc71; /* Color de la línea */
+  margin: 10px auto; /* Espaciado entre el texto y la línea */
+}
+
+.nav {
+    background-color: #211e1c;
+}
+
+.nav-tabs .nav-link {
+    font-weight: 500;   
+    color: #ffffff;
+  }
+
+.nav-tabs .nav-link.active {
+  color: #211e1c;
+  background-color: #f5f4f2;
+  border-color: #dee2e6 #dee2e6 #dee2e6;  
+}
+
+.bg-oracle-red {
+  background-color: #c74634;
+}
+.text-oracle-red {
+  color: #c74634;
+}
+.initiative-card,
+.stat-card {
+  transition: transform 0.3s ease-in-out;
+}
+.initiative-card:hover {
+  transform: translateY(-5px);
+}
+.stat-card:hover {
+  transform: scale(1.05);
+}
+.img-stories1,
+.img-stories2 {
+  transition: transform 0.3s ease-in-out;
+}
+.img-stories1:hover,
+.img-stories2:hover {
+  transform: scale(1.1);
+}
+.cta-button {
+  transition: all 0.3s ease-in-out;
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sections {
+  height: 700px;
+}
+
+.img-education {
+  background-image: url("../img/impact/impactoeducation.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin-top: -2px;
+}
+
+.img-sustainability {
+  background-image: url("../img/impact/impactosostenibilidad.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin-top: -2px;
+}
+
+.img-community {
+  background-image: url("../img/impact/impactocomunidad.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin-top: -2px;
+}
+
+.cards {
+  height: 700px !important;
+}
+
+.img-stories1 {
+  background-image: url("../img/impact/storie1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.img-stories2 {
+  background-image: url("../img/impact/storie2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
