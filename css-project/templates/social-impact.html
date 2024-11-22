@@ -12,10 +12,75 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
     <link href="../static/css/social-impact.css" rel="stylesheet" />
+    <link href="../static/css/principal.css" rel="stylesheet" />
   </head>
 
   <body>
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <section
+        class="container-fluid position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <figure class="logo-header"></figure>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+              <a href="../templates/aboutUs.html" class="active"
+                >Quienes somos</a
+              >
+            </li>
+            <li><a href="../templates/resources.html">Recursos</a></li>
+            <li><a href="../templates/news.html">Noticias</a></li>
+            <li><a href="../templates/employees.html">Empleos</a></li>
+            <li>
+              <a href="../templates/social-impact.html">Impacto social</a>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <section class="header-social-links">
+          <a href="https://x.com/oracle?lang=es" class="twitter"
+            ><i class="bi bi-twitter-x"></i
+          ></a>
+          <a href="https://www.facebook.com/Oracle" class="facebook"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/oracle/" class="instagram"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="https://pe.linkedin.com/company/oracle" class="linkedin"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+        </section>
+      </section>
+    </header>
+
     <main class="container py-5">
       <!-- Initiatives Section -->
       <section class="initiatives mb-5">
@@ -223,10 +288,141 @@
       </section>
     </main>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <footer id="footer" class="footer light-background">
+      <section class="container footer-top">
+        <section class="row gy-4">
+          <section class="col-lg-5 col-md-12 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Oracle</span>
+            </a>
+            <p>
+              Oracle apoya a organizaciones de todos los tamaños a mejorar la
+              eficiencia, la innovación y la toma de decisiones basadas en
+              datos. Fundada en 1977.
+            </p>
+            <section class="social-links d-flex mt-4">
+              <a href="https://x.com/oracle?lang=es"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="https://www.facebook.com/Oracle"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/oracle/"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="https://pe.linkedin.com/company/oracle"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </section>
+          </section>
+
+          <section class="col-lg-2 col-6 footer-links">
+            <h4>Compañia</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="../templates/aboutUs.html">Quienes somos</a></li>
+              <li><a href="../templates/resources.html">Recursos</a></li>
+              <li><a href="../templates/news.html">Noticias</a></li>
+              <li><a href="../templates/employees.html">Empleos</a></li>
+              <li>
+                <a href="../templates/social-impact.html">Impacto Social</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="col-lg-2 col-6 footer-links">
+            <h4>Nuestros Servicios</h4>
+            <ul>
+              <li>
+                <a href="https://www.oracle.com/customer-success/"
+                  >Oracle Security Services</a
+                >
+              </li>
+              <li>
+                <a href="https://www.oracle.com/customer-success/"
+                  >Oracle Blockchain</a
+                >
+              </li>
+              <li>
+                <a href="https://www.oracle.com/customer-success/">Oracle AI</a>
+              </li>
+              <li>
+                <a href="https://www.oracle.com/customer-success/"
+                  >Oracle Database Services</a
+                >
+              </li>
+              <li>
+                <a href="https://www.oracle.com/customer-success/"
+                  >Oracle Analytics</a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
+            <h4>Contactanos</h4>
+            <p>Av. El Derby 055 Piso 5 Of. 502</p>
+            <p>Centro de Negocios Cronos Torre 1</p>
+            <p>Lima, Perú</p>
+            <p class="mt-4">
+              <strong>Teléfono:</strong> <span>+51 1 615 1047</span>
+            </p>
+            <p><strong>Correo:</strong> <span>oracle.peru@gmail.com</span></p>
+          </section>
+        </section>
+      </section>
+
+      <section class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Oracle 2024</strong>
+          <span>Todos los derechos reservados</span>
+        </p>
+      </section>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <section id="preloader"></section>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- PHP Email Form Validation -->
+    <script src="https://cdn.jsdelivr.net/gh/twbs/form-validation@1.0.0/validate.min.js"></script>
+    <!-- Asegúrate de verificar si este es el correcto o una alternativa -->
+
+    <!-- AOS (Animate on Scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+
+    <!-- Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
+    <!-- PureCounter -->
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.5.0/dist/purecounter_vanilla.js"></script>
+
+    <!-- GLightbox -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+
+    <!-- ImagesLoaded -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Isotope Layout -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.js"></script>
+
     <script src="../static/js/social-impact.js"></script>
+    <script src="../static/js/aboutUs.js"></script>
   </body>
 </html>
