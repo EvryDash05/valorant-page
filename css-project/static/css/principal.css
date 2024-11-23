@@ -81,7 +81,7 @@ h6 {
   --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #312d2a;
   align-items: center;
   padding: 20px 0;
   transition: all 0.5s;
@@ -89,14 +89,14 @@ h6 {
 }
 
 .logo-header {
-  background: url("../img/aboutUs/logo_negro.png") no-repeat center center;
+  background: url("../img/aboutUs/logo_rojo.png") no-repeat center center;
   background-size: contain;
   width: 190px;
   height: 70px;
 }
 
 .logo-header:hover {
-  background: url("../img/aboutUs/logo_rojo.png") no-repeat center center;
+  background: url("../img/aboutUs/logo_negro.png") no-repeat center center;
   background-size: contain;
   width: 190px;
   height: 70px;
@@ -179,7 +179,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: #ffffff;
     padding: 10px 15px;
     margin-left: 2px;
     font-size: 16px;
@@ -268,7 +268,7 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: #ffffff;
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -396,8 +396,8 @@ h6 {
   # Global Footer
   --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #ffffff;
+  background-color: #312d2a;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -418,7 +418,7 @@ h6 {
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
+  color: #ffffff;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -437,9 +437,9 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, #ffffff, transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, #ffffff, transparent 50%);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -483,7 +483,7 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, #ffffff, transparent 20%);
   display: inline-block;
   line-height: 1;
 }
@@ -499,7 +499,7 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: color-mix(in srgb, #ffffff, transparent 95%);
 }
 
 .footer .copyright p {
