@@ -1,208 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./static/css/index.less" />
-    <link
-      rel="stylesheet"
-      href="https://db.onlinewebfonts.com/c/7200c6dd8ac604abe09f5159e53a40c0?family=Mark+Pro"
-    />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <article class="logo">
-          <a href="/index.html">
-            <svg
-              width="90"
-              height="30"
-              class="logo-svg"
-              viewBox="0 0 587.93 165"
-            ></svg>
-          </a>
-        </article>
-        <ul class="nav-links">
-          <li><a href="/templates/aboutUs.html">QUIÉNES SOMOS</a></li>
-          <li>
-            <a href="/templates/riotOffices.html">TRABAJA CON NOSOTROS</a>
-          </li>
-          <li><a href="templates/news.html">NOTICIAS</a></li>
-          <li><a href="/templates/diversity.html">DIVERSIDAD</a></li>
-          <li><a href="/templates/socialImpact.html">IMPACTO</a></li>
-        </ul>
-        <section class="nav-right">
-          <select class="language-select">
-            <option value="es">ES</option>
-            <option value="en">EN</option>
-          </select>
-          <article class="search-container">
-            <input type="text" placeholder="BUSCAR" />
-            <i class="fas fa-search"></i>
-          </article>
-          <button class="login-btn">INICIAR SESIÓN</button>
-        </section>
-        <section class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </section>
-      </nav>
-    </header>
 
-    <main>
-      <section class="hero">
-        <figure>
-          <!-- Hero image -->
-        </figure>
-        <section class="hero-content">
-          <figure class="runneterra-logo"></figure>
-          <h1>Esto es Runaterror</h1>
-          <p href="#games" class="cta-button">
-            Fiddlesticks y Evelynn serán los protagonistas de vuestras
-            pesadillas en la versión más terrorífica de LoR hasta la fecha, Esto
-            es Runaterror, que estará disponible el 9 de octubre.
-          </p>
-        </section>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://db.onlinewebfonts.com/c/7200c6dd8ac604abe09f5159e53a40c0?family=Mark+Pro" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="../static/css/principal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./static/css/index.css" />
+  <title>Vite App</title>
+</head>
 
-      <section>
-        <section
-          class="hero-content"
-          style="background-color: #292929; text-align: center"
-        >
-          <h1>JUEGOS DE RIOT</h1>
-          <p>Explora nuestros juegos y el universo de Riot</p>
-          <a href="#games" class="cta-button">VER TODOS LOS JUEGOS</a>
-        </section>
+<body>
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <section class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <figure class="logo-header"></figure>
+      </a>
 
-        <section id="games" class="games-grid">
-          <section class="game-card">
-            <figure class="lol-banner"></figure>
-          </section>
-          <section class="game-card">
-            <figure class="valorant-banner"></figure>
-          </section>
-          <section class="game-card">
-            <figure class="team-fights"></figure>
-          </section>
-          <section class="game-card">
-            <figure class="runneterra-banner"></figure>
-          </section>
-        </section>
-      </section>
-
-      <section class="news">
-        <h2>ÚLTIMAS NOTICIAS</h2>
-        <section class="news-grid">
-          <article class="news-card">
-            <a
-              href="https://www.leagueoflegends.com/es-es/news/community/lol-player-days/"
-            >
-              <figure class="news-1"></figure>
-            </a>
-            <h3>Player Days LoL</h3>
-            <p>Breve descripción de la noticia 1...</p>
-            <a href="#" class="read-more">Leer más</a>
-          </article>
-          <article class="news-card">
-            <a href="https://www.youtube.com/watch?v=5FrhtahQiRc">
-              <figure class="news-2"></figure>
-            </a>
-            <h3>
-              Heavy Is The Crown ft. Linkin Park (vídeo musical oficial) | Himno
-              Mundial 2024 - League of Legends
-            </h3>
-            <p>Breve descripción de la noticia 2...</p>
-            <a href="#" class="read-more">Leer más</a>
-          </article>
-          <article class="news-card">
-            <a href="https://www.youtube.com/watch?v=mlbzg0UTg6o">
-              <figure class="news-3"></figure>
-            </a>
-            <h3>Comportamiento de los jugadores, equilibrio y antitrampas</h3>
-            <p>Breve descripción de la noticia 3...</p>
-            <a href="#" class="read-more">Leer más</a>
-          </article>
-        </section>
-      </section>
-    </main>
-
-    <footer>
-      <section class="footer-content">
-        <article class="logo">
-          <a href="/index.html">
-            <svg
-              width="90"
-              height="30"
-              class="logo-svg"
-              viewBox="0 0 587.93 165"
-            ></svg>
-          </a>
-        </article>
-        <article class="footer-links">
-          <ul>
-            <li>
-              <a href="./templates/aboutUs.html">Acerca de Riot Games</a>
-            </li>
-            <li>
-              <a href="./templates/lifeInRitot.html">Vida en Riot Games</a>
-            </li>
-            <li>
-              <a href="./templates/socialImpact.html">Impacto social</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="./templates/employees.html">Empleos</a>
-            </li>
-            <li>
-              <a
-                href="https://www.riotgames.com/es/trabaja-con-nosotros/oficinas"
-                >Oficinas</a
-              >
-            </li>
-            <li><a href="#">Soporte</a></li>
-            <li><a href="#">Esports</a></li>
-          </ul>
-        </article>
-        <article class="social-media">
-          <a href="https://www.facebook.com/RiotGames/"
-            ><i class="fab fa-facebook"></i
-          ></a>
-          <a href="https://twitter.com/riotgames"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="https://www.instagram.com/riotgames/"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="https://www.youtube.com/riotgames"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </article>
-      </section>
-      <section class="footer-bottom">
-        <p>&copy; 2024 Riot Games, Inc. Todos los derechos reservados.</p>
+      <nav id="navmenu" class="navmenu">
         <ul>
+          <li><a href="index.html">Inicio</a></li>
           <li>
-            <a href="https://www.riotgames.com/es/privacy-notice-ES"
-              >Política de privacidad</a
-            >
+            <a href="../templates/aboutUs.html">Quienes somos</a>
           </li>
+          <li><a href="../templates/resources.html">Recursos</a></li>
+          <li><a href="../templates/news.html">Noticias</a></li>
+          <li><a href="../templates/employees.html">Empleos</a></li>
           <li>
-            <a href="https://www.riotgames.com/es/terms-of-service-ES"
-              >Términos de servicio</a
-            >
-          </li>
-          <li>
-            <a href="https://www.riotgames.com/es/asistencia-al-jugador"
-              >Asitencia al juador</a
-            >
+            <a href="../templates/social-impact.html" class="active">Impacto social</a>
           </li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <section class="header-social-links">
+        <a href="https://x.com/oracle?lang=es" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/Oracle" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/oracle/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://pe.linkedin.com/company/oracle" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </section>
+    </section>
+  </header>
+
+  <section class="hero-section text-white py-5">
+    <section class="container">
+      <section class="row align-items-center">
+        <section class="col-lg-6">
+          <h1 class="display-4 fw-bold">Oracle Cloud Infrastructure</h1>
+          <p class="lead">Construye, ejecuta y gestiona tus aplicaciones con la próxima generación de cloud computing.
+          </p>
+          <section class="mt-4">
+            <button class="btn btn-primary btn-lg me-3">Empezar Gratis</button>
+            <button class="btn btn-outline-light btn-lg">Ver Demo</button>
+          </section>
+        </section>
+        <section class="col-lg-6">
+          <figure class="cloud-oracle"></figure>
+          <!-- <img src="https://via.placeholder.com/600x400" alt="Cloud Infrastructure" class="img-fluid rounded"> -->
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <section class="py-5">
+    <section class="container">
+      <h2 class="text-center mb-5">Soluciones Empresariales Líderes</h2>
+      <section class="row g-4">
+        <section class="col-md-4">
+          <section class="card h-100">
+            <section class="card-body">
+              <h3 class="card-title h5">Fireworks AI</h3>
+              <p class="card-text">El servicio de OCI ayuda a impulsar el negocio de inferencia y entrenamiento de
+                modelos de IA de alta potencia del proveedor de tecnología</p>
+              <figure class="firework-img"></figure>
+              <a href="#" class="btn btn-link">Saber más →</a>
+            </section>
+          </section>
+        </section>
+        <section class="col-md-4">
+          <section class="card h-100">
+            <section class="card-body">
+              <h3 class="card-title h5">Clayton</h3>
+              <p class="card-text">Clayton integra procesos financieros, de planificación y de cadena de suministro a
+                medida que expande su oferta a nivel nacional.</p>
+              <figure class="clayton-img"></figure>
+              <a href="#" class="btn btn-link">Saber más →</a>
+            </section>
+          </section>
+        </section>
+        <section class="col-md-4">
+          <section class="card h-100">
+            <section class="card-body">
+              <h3 class="card-title h5">Hyatt se estandarizará con Oracle OPERA</h3>
+              <p class="card-text">La cadena hotelera líder extiende su plataforma a más de 1.000 hoteles y propiedades
+                con todo incluido.</p>
+              <figure class="oracle-opera-img"></figure>
+              <a href="#" class="btn btn-link">Saber más →</a>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <section class="bg-light py-5">
+      <section class="container">
+        <section class="row justify-content-center text-center">
+          <section class="col-lg-8">
+            <h2>Comienza tu viaje hacia la nube</h2>
+            <p class="lead mb-4">Únete a miles de empresas que ya confían en Oracle Cloud</p>
+            <button class="btn btn-primary btn-lg">Hablar con un experto</button>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <footer id="footer" class="footer light-background">
+      <section class="container footer-top">
+        <section class="row gy-4">
+          <section class="col-lg-5 col-md-12 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Oracle</span>
+            </a>
+            <p>
+              Oracle apoya a organizaciones de todos los tamaños a mejorar la
+              eficiencia, la innovación y la toma de decisiones basadas en
+              datos. Fundada en 1977.
+            </p>
+            <section class="social-links d-flex mt-4">
+              <a href="https://x.com/oracle?lang=es"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://www.facebook.com/Oracle"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/oracle/"><i class="bi bi-instagram"></i></a>
+              <a href="https://pe.linkedin.com/company/oracle"><i class="bi bi-linkedin"></i></a>
+            </section>
+          </section>
+
+          <section class="col-lg-2 col-6 footer-links">
+            <h4>Compañia</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="../templates/aboutUs.html">Quienes somos</a></li>
+              <li><a href="../templates/resources.html">Recursos</a></li>
+              <li><a href="../templates/news.html">Noticias</a></li>
+              <li><a href="../templates/employees.html">Empleos</a></li>
+              <li>
+                <a href="../templates/social-impact.html">Impacto Social</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="col-lg-2 col-6 footer-links">
+            <h4>Nuestros Servicios</h4>
+            <ul>
+              <li>
+                <a href="https://www.oracle.com/customer-success/">Oracle Security Services</a>
+              </li>
+              <li>
+                <a href="https://www.oracle.com/customer-success/">Oracle Blockchain</a>
+              </li>
+              <li>
+                <a href="https://www.oracle.com/customer-success/">Oracle AI</a>
+              </li>
+              <li>
+                <a href="https://www.oracle.com/customer-success/">Oracle Database Services</a>
+              </li>
+              <li>
+                <a href="https://www.oracle.com/customer-success/">Oracle Analytics</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contactanos</h4>
+            <p>Av. El Derby 055 Piso 5 Of. 502</p>
+            <p>Centro de Negocios Cronos Torre 1</p>
+            <p>Lima, Perú</p>
+            <p class="mt-4">
+              <strong>Teléfono:</strong> <span>+51 1 615 1047</span>
+            </p>
+            <p><strong>Correo:</strong> <span>oracle.peru@gmail.com</span></p>
+          </section>
+        </section>
+      </section>
+
+      <section class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Oracle 2024</strong>
+          <span>Todos los derechos reservados</span>
+        </p>
       </section>
     </footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+</body>
+
 </html>

@@ -1,0 +1,31 @@
+.cloud-oracle{
+    background-image: url('../img/home/oracle-cloud.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 300px;
+}
+
+.firework-img{
+    background-image: url('../img/home/firework-ai.png');
+    background-size: cover;
+    background-position: center;
+    height: 110px;
+    width: 330px;
+}
+
+.clayton-img{
+    background-image: url('../img/home/clayton.png');
+    background-size: cover;
+    background-position: center;
+    height: 110px;
+    width: 330px;
+}
+
+.oracle-opera-img{
+    background-image: url('../img/home/hyatt.png');
+    background-size: cover;
+    background-position: center;
+    height: 110px;
+    width: 330px;
+}
