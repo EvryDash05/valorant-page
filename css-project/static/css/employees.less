@@ -1,506 +1,170 @@
-@color_1: white;
-@color_2: #f4f4f4;
-@color_3: black;
-@color_4: rgb(33, 225, 113);
-@color_5: greenyellow;
-@secondary-color: #292929;
-@primary-color: #d13639;
-@font-family: 'Mark Pro', Arial, sans-serif;
-@background_color_1: #e7e6e3;
-@background_color_2: red;
-@background_color_3: grey;
-@background_color_4: rgb(58, 147, 215);
-@background_color_5: #f9f9f9;
-@background_color_6: transparent;
-@background_color_7: black;
-@border_color_1: rgb(33, 225, 113);
-@border_color_2: white;
-@hover-colors: #dec66e, #8bd48b, #6391d5, #ff9900, #814e9a;
-@text-color: #f9f9f9;
-
-@import "https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap";
-
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes slideoff {
-	from {
-		margin-left: 100%;
-		width: 300%;
-	}
-
-	to {
-		margin-left: 0%;
-		width: 100%;
-	}
-}
-
-@keyframes slidein {
-	from {
-		margin-left: 100%;
-		width: 300%;
-	}
-
-	to {
-		margin-left: 0%;
-		width: 100%;
-	}
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+/* General Styles */
 body {
-	margin: 0;
-	padding: 0;
-	background-color: @background_color_1;
-	font-family: @font-family;
+    font-family: "Sour Gummy", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background */
+}
+/* Agregar imagen de fondo que cubra toda la sección */
+.bg-image {
+    background-image: url('../img/employees/Main.jpg'); /* Cambia 'ruta-de-la-imagen.jpg' por la URL de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el área de la sección */
+    background-position: center center; /* Centra la imagen en la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Asegura que la sección tenga el ancho completo */
+    height: 100vh; /* Asegura que la sección ocupe el 100% de la altura del viewport (pantalla) */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el texto dentro de la sección */
 }
 
-.port {
-	background-image: url('../img/employees/fondo.jpg');
-	animation: fadeIn 1s ease-in-out;
-	padding: 200px;
-	max-width: 100%;
-	height: auto;
-	flex-wrap: wrap;
-	background-size: cover;
-	background-position: 100%;
-}
-
-.title {
-	font-size: 50px;
-	text-align: center;
-	overflow: hidden;
-	animation: letter-spacing-reveal 1.4s .2s cubic-bezier(.215, .61, .355, 1) 1 forwards;
-	color: @color_1;
-	text-transform: uppercase;
-}
-
-.container {
-	max-width: 1250px;
-	margin: auto;
-	align-items: center;
-	justify-content: space-between;
-	display: flex;
-}
-
-.section-title {
-	font-size: 2rem;
-	margin-bottom: 10px;
-	text-align: center;
-	color: @color_2;
-}
-
-.section-title1 {
-	color: @color_3;
-	background-color: @background_color_2;
-	margin: 0;
-	animation-duration: 3s;
-	animation-name: slideoff;
-	animation-iteration-count: 3;
-	animation-direction: alternate;
-}
-
-.job-section {
-	height: 80vh;
-	width: 100%;
-	margin-top: 35px;
-	padding: 0px;
-	transition: transform 0.3s ease-in-out;
-	align-items: center;
-	justify-content: space-between;
-	text-align: center;
-	background-color: @background_color_3;
-	animation: fadeIn 1s ease-in-out;
-}
-
-.job-list {
-	height: auto;
-	padding: 0;
-	display: flex;
-	margin: 0px;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center;
-	background-color: @background_color_3;
-
-	article {
-		background-color: @background_color_4;
-		border-color: @border_color_1;
-		padding: 10px;
-		margin: 30px;
-		border-radius: 10px;
-		height: 50vh;
-
-		strong {
-			align-items: center;
-			text-align: center;
-			display: flex;
-			margin-top: 10px;
-			font-size: 1.2em;
-			text-align: center;
-			color: @color_4;
-		}
-
-		section {
-			margin: 20px;
-			background-color: @background_color_5;
-			padding: 20px;
-			border-radius: 8px;
-			box-shadow: 0 2px 5px rgba(241, 14, 14, 0.1);
-			height: 80px;
-			width: 200px;
-			background-size: cover;
-			background-position: center;
-			transition: all ease-in-out 0.5s;
-			background-position: 100%;
-		}
-	}
-}
-
-.job1 {
-	object-fit: cover;
-	background-image: url('../img/employees/ISRIOT.webp');
-	background-position: 100%;
-}
-
-.job2 {
-	background-image: url('../img/employees/Art3d.jpg');
-	background-position: 100%;
-	animation: fadeIn 1s ease-in-out;
-}
-
-.job3 {
-	background-image: url('../img/employees/job3.png');
-	animation: fadeIn 1s ease-in-out;
-	background-position: 100%;
-}
-
-button {
-	background-color: @background_color_6;
+/* Contenedor de texto */
+.Start {
+    display: flex;
+	justify-content: flex-start !important;
+    align-items: center;     /* Centra el contenido verticalmente */
+    height: 350px;
+	width: 700px;           /* Asegura que ocupe toda la altura de la ventana */
+    background-color: white; /* Color de fondo para la sección */
 	border-radius: 10px;
-	border-color: @border_color_2;
-	margin: 20px;
-	text-transform: uppercase;
-	color: @color_1;
-	font-size: 15px;
-	background-position: left;
-	transition: background-position .5s ease;
-
-	&:hover {
-		color: @color_5;
-		background-color: @background_color_3;
-		background-position: right;
-	}
+	margin: 50px;
 }
 
-span {
-	margin: 20px;
-	padding: 10px;
+.line::before {
+    content: "";
+    display: block;
+    width: 40px; /* Ancho de la línea */
+    height: 4px; /* Alto de la línea */
+    background-color: red; /* Color de la línea */
+    margin:  0 .600em; /* Espaciado superior e inferior */
 }
 
-#offices1 {
-	background-image: url('../img/employees/riot.png');
-	background-size: cover;
-	width: 450px;
-	height: 400px;
-	background-position: center;
-	background-position: 100%;
-	padding: 0;
-	margin: 0;
-
-	&:hover {
-		width: 100%;
-		height: 100%;
-	}
+.linear::before {
+    content: "";
+    display: block;
+    width: 40px; /* Ancho de la línea */
+    height: 4px; /* Alto de la línea */
+    background-color: #f0cc71; /* Color de la línea */
+    margin:  0 .600em; /* Espaciado superior e inferior */
 }
-
-#offices2 {
-	background-image: url('../img/employees/oficinas2.jpg');
-	background-size: cover;
-	width: 450px;
-	height: 400px;
-	background-position: center;
-	background-position: 100%;
+.btn{
 	margin: 10px;
-	padding: 0;
-	margin: 0;
 
-	&:hover {
-		width: 100%;
-		height: 100%;
-	}
+}
+.text-box span {
+    margin-bottom: 15px; /* Espaciado entre el título y el párrafo */
+	margin: 10px;
+    font-size: 3em;      /* Tamaño de fuente del título */
+	
 }
 
-#offices3 {
-	background-image: url('../img/employees/OFF.jpg');
-	background-size: cover;
-	width: 400px;
-	height: 400px;
-	background-position: center;
-	background-position: 100%;
-	padding: 0;
-	margin: 0;
-
-	&:hover {
-		width: 100%;
-		height: 100%;
-	}
+.text-box p {
+    font-size: 1.2em; /* Tamaño de la fuente del párrafo */
+	margin: 15px;
 }
 
-.oficinas {
-	text-align: center;
-	align-items: center;
-	margin: 35px;
-	padding: 0;
-	animation-duration: 3s;
-	animation-name: slidein;
-	margin-top: 30px;
 
-	.offices {
-		justify-content: center;
-		display: flex;
-	}
+/* Section Titles */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+    text-transform: uppercase;
 }
 
-.section-title2 {
-	text-transform: uppercase;
+.menu{
+	background-color: #34363B;
+	height: 300px;
 }
 
-.off {
-	background-color: @background_color_7;
-	color: @color_1;
-	padding: 0px;
-	margin: 0px;
-	font-size: 20px;
+/* Cards */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-article {
-	section {
-		section {
-			width: 100%;
-			margin: 10px;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-		}
-	}
+.row{
+	margin: 15px;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-// Header styles
-header {
-	opacity: 0;
-	transform: translateY(-20px);
-	transition: opacity 0.5s ease, transform 0.5s ease;
-	background-color: rgba(168, 35, 35, 0.8);
-	position: fixed;
-	width: 100%;
-	z-index: 1000;
-
-	&.visible {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1px;
-
-		.logo {
-			.logo-svg {
-				fill: #f9f9f9;
-				display: block;
-				height: 70px;
-				width: 100px;
-				background-image: url('../img/home/riot-logo.svg');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-				transition: transform 0.3s ease;
-
-				&:hover {
-					transform: scale(1.1);
-				}
-			}
-		}
-
-		.nav-links {
-			display: flex;
-			list-style: none;
-
-			li {
-				margin: 0 1rem;
-				position: relative;
-
-				a {
-					font-weight: bold;
-					position: relative;
-					z-index: 2;
-					color: @text-color;
-					text-decoration: none;
-					padding: 0.5rem 1rem;
-					transition: color 0.3s ease;
-
-					&::before {
-						content: "";
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						bottom: 0;
-						background-color: transparent;
-						z-index: -1;
-						transform: scaleY(0);
-						transform-origin: bottom;
-						transition: transform 0.3s ease;
-					}
-
-					&:hover {
-						&::before {
-							transform: scaleY(1);
-						}
-
-						color: #000; // Nuevo: Cambia el color del texto a negro en hover
-					}
-				}
-
-				.generate-hover-colors(@i) when (@i > 0) {
-					&:nth-child(@{i}) {
-						a::before {
-							background-color: extract(@hover-colors, @i);
-						}
-					}
-
-					.generate-hover-colors(@i - 1);
-				}
-
-				.generate-hover-colors(length(@hover-colors));
-			}
-		}
-	}
-
-	.hamburger {
-		display: none;
-		flex-direction: column;
-		cursor: pointer;
-
-		span {
-			width: 25px;
-			height: 3px;
-			background-color: #f9f9f9;
-			margin: 2px 0;
-		}
-	}
+.card-title {
+    color: #007bff;
+    font-size: 1.5rem;
 }
 
-//Footer styles
-footer {
-	opacity: 0;
-	transform: translateY(20px);
-	transition: opacity 0.5s ease, transform 0.5s ease;
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+}
 
-	.logo {
-		.logo-svg {
-			fill: #f9f9f9;
-			display: block;
-			height: 70px;
-			width: 100px;
-			background-image: url('../img/home/riot-logo.svg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			transition: transform 0.3s ease;
+/* Button Enhancements */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
 
-			&:hover {
-				transform: scale(1.1);
-			}
-		}
-	}
+.btn-success:hover {
+    background-color: #218838;
+    color: white;
+}
 
-	&.visible {
-		opacity: 1;
-		transform: translateY(0);
-	}
+#img-3{
+	background-image: url('../img/employees/sistemas.jpg');
+	background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura fija, puedes ajustarla según tus necesidades */
+    border-top: 1px solid #ddd; /* Opcional: añade un borde para separar visualmente */
+}
+#img-2 {
+    background-image: url('../img/employees/IngenieroSoftware.jpg'); /* Cambia por la URL de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura fija, puedes ajustarla según tus necesidades */
+    border-top: 1px solid #ddd; /* Opcional: añade un borde para separar visualmente */
+}
 
-	background-color: @secondary-color;
-	padding: 2rem;
 
-	.footer-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		flex-wrap: wrap;
-		margin-bottom: 2rem;
+#img-4{
+	background-image: url('../img/employees/GENO2.jpg');
+	background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura fija, puedes ajustarla según tus necesidades */
+    border-top: 1px solid #ddd; /* Opcional: añade un borde para separar visualmente */
+}
 
-		.footer-logo img {
-			height: 50px;
-		}
 
-		.footer-links {
-			display: flex;
-			gap: 2rem;
+#img-1{
+	background-image: url(../img/employees/Gerente.jpg);
+	background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura fija, puedes ajustarla según tus necesidades */
+    border-top: 1px solid #ddd; /* Opcional: añade un borde para separar visualmente */
+}
 
-			ul {
-				list-style: none;
 
-				li {
-					margin-bottom: 0.5rem;
 
-					a {
-						&:hover {
-							text-decoration: underline;
-						}
-					}
-				}
-			}
-		}
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
 
-		.social-media {
-			a {
-				margin-right: 1rem;
-				font-size: 1.5rem;
-
-				&:hover {
-					color: @primary-color;
-				}
-			}
-		}
-	}
-
-	.footer-bottom {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
-		padding-top: 1rem;
-
-		p {
-			font-size: 0.9rem;
-		}
-
-		ul {
-			display: flex;
-			list-style: none;
-
-			li {
-				margin-left: 1rem;
-
-				a {
-					font-size: 0.9rem;
-
-					&:hover {
-						text-decoration: underline;
-					}
-				}
-			}
-		}
-	}
+    header p {
+        font-size: 1rem;
+    }
 }

@@ -1,182 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/employees.less" />
-    <link
-      rel="stylesheet"
-      href="https://db.onlinewebfonts.com/c/7200c6dd8ac604abe09f5159e53a40c0?family=Mark+Pro"
-    />    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="icon" href="imagen/logoriot.png" />
-    <title>Empleo | Riot</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <article class="logo">
-          <a href="/index.html">
-            <svg
-              width="90"
-              height="30"
-              class="logo-svg"
-              viewBox="0 0 587.93 165"
-            ></svg>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="../static/css/principal.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/employees.less">
+</head>
+<body>
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <section class="container-fluid position-relative d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <figure class="logo-header"></figure>
           </a>
-        </article>
-        <ul class="nav-links">
-          <li><a href="/templates/aboutUs.html">QUIÉNES SOMOS</a></li>
-          <li>
-            <a href="/templates/riotOffices.html">TRABAJA CON NOSOTROS</a>
-          </li>
-          <li><a href="templates/news.html">NOTICIAS</a></li>
-          <li><a href="/templates/diversity.html">DIVERSIDAD</a></li>
-          <li><a href="/templates/socialImpact.html">IMPACTO</a></li>
-        </ul>
-        <section class="nav-right">
-          <select class="language-select">
-            <option value="es">ES</option>
-            <option value="en">EN</option>
-          </select>
-          <article class="search-container">
-            <input type="text" placeholder="BUSCAR" />
-            <i class="fas fa-search"></i>
-          </article>
-          <button class="login-btn">INICIAR SESIÓN</button>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li>
+                <a href="../templates/aboutUs.html">Quienes somos</a>
+              </li>
+              <li><a href="../templates/resources.html">Recursos</a></li>
+              <li><a href="../templates/news.html">Noticias</a></li>
+              <li><a href="../templates/employees.html">Empleos</a></li>
+              <li>
+                <a href="../templates/social-impact.html" class="active">Impacto social</a>
+              </li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+          <section class="header-social-links">
+            <a href="https://x.com/oracle?lang=es" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/Oracle" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/oracle/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://pe.linkedin.com/company/oracle" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </section>
         </section>
-        <section class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+      </header>
+    
+  <section class="bg-image text-black py-5 justify-content-between " >
+    <section class="Start ">
+      <section class="text-box text-justify main">
+          <p>Oportunidades profesionales en Oracle</p>
+          <span>Crea el futuro con nosotros</span>
+          <section class="line"></section>
+          <p >¿Deseas marcar la diferencia? Estás en el lugar correcto. Estamos utilizando las tecnologías del futuro para abordar los problemas reales de la actualidad.</p>
+          <button class="btn btn-dark mb-3">Busca Oportunidades profesionales </button>
+          </section>
+  </section>
+</section>
+        <section class="menu mb-5" >
+            <h2 class="text-start text-white ">Un lugar en el que todas las personas puedan crecer</h2>
+            <section class="linear mb-4"></section>
+            <section class="row justify-content-between text-white">
+              <section class="col-md-3">
+                  <i class="bi bi-people fs-1 text-primary"></i>
+                  <h4>Impulsa tu futuro</h4>
+                  <p>¿Eres estudiante o te graduaste recientemente? Tenemos múltiples programas que pueden ayudarte a desarrollar tus competencias y lanzar tu carrera.</p>
+              </section>
+              <section class="col-md-3">
+                  <i class="bi bi-lightbulb fs-1 text-primary"></i>
+                  <h4>Innovación</h4>
+                  <p>Trabajar en tecnologías de vanguardia y crear soluciones innovadoras.</p>
+              </section>
+              <section class="col-md-3 ">
+                  <i class="bi bi-heart fs-1 text-primary"></i>
+                  <h4>Bienestar de los empleados</h4>
+                  <p>Disfrute de beneficios que promueven el equilibrio y el bienestar de su vida personal y laboral.</p>
+              </section>
+              <section class="col-md-3 ">
+                <i class="bi bi-heart fs-1 text-primary"></i>
+                <h4>Vive bien</h4>
+                <p >Los beneficios que ofrecemos se han creado para ayudarte a llevar una vida equilibrada.</p>
+            </section>
         </section>
-      </nav>
-    </header>
+        </section>
 
-    <section class="port">
-      <h1 class="title">Trabaja con Nosotros</h1>
-    </section>
+        <article class="mb-5">
+            <h2 class="text-center mb-4">Empleos destacados</h2>
+            <section class="row">
+              <section class="col-md-6 mb-3">
+                <section class="card">
+                    <section class="row g-0 align-items-center">
+                        <!-- Sección de imagen -->
+                        <section class="col-md-4">
+                            <section id="img-2" class="img-left"></section>
+                        </section>
+                        <!-- Sección de texto -->
+                        <section class="col-md-8">
+                            <section class="card-body">
+                                <h5 class="card-title">Ingeniero de Software</h5>
+                                <p class="card-text">
+                                    Trabaje en aplicaciones basadas en la nube que impactan a millones de personas en todo el mundo.
+                                </p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            
+                <section class="col-md-6 mb-3">
+                  <section class="card">
+                      <section class="row g-0 align-items-center">
+                          <!-- Sección de imagen -->
+                          <section class="col-md-4">
+                              <section id="img-1" class="img-left"></section>
+                          </section>
+                          <!-- Sección de texto -->
+                          <section class="col-md-8">
+                              <section class="card-body">
+                                  <h5 class="card-title">Gerente de Producto</h5>
+                                  <p class="card-text">Liderar estrategias de productos y dar vida a ideas innovadoras.</p>
+                                  <a href="#" class="btn btn-primary">Más información</a>
+                              </section>
+                          </section>
+                      </section>
+                  </section>
+              </section>
 
-    <article class="container">
-      <section class="job-section">
-        <h2 class="section-title1" id="title">RIOT</h2>
-        <h2 class="section-title">
-          Únete a Riot para forjar tu camino y crear experiencias inolvidables
-          para los jugadores
-        </h2>
-        <section class="job-list" class="text-bg-secondary">
-          <article class="profesion">
-            <strong>Ingeniero de Software</strong>
-            <p>Ubicación: Los Ángeles, USA</p>
-            <section class="job1"></section>
-            <button type="button" class="btn btn-outline-success "><span>Mas informacion</span></button>
-          </article>
-          <article class="profesion2">
-            <strong>Artista 3D</strong>
-            <p>Ubicación: Berlín, Alemania</p>
-            <section class="job2"></section>
-            <button type="button" class="btn btn-outline-success"><span>Mas informacion</span></button>
-          </article>
+              <section class="col-md-6 mb-3">
+                <section class="card">
+                    <section class="row g-0 align-items-center">
+                        <!-- Sección de imagen -->
+                        <section class="col-md-4">
+                            <section id="img-3" class="img-left"></section>
+                        </section>
+                        <!-- Sección de texto -->
+                        <section class="col-md-8">
+                            <section class="card-body">
+                                <h5 class="card-title">Ingeniero de Sistemas</h5>
+                                <p class="card-text">Diseñar, implementar y optimizar sistemas informáticos escalables y de alto rendimiento.</p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
 
-          <article class="profesion3" >
-            <strong>Productora de juegos</strong>
-            <p>Ubicación: Shanghái, China</p>
-            <section class="job3"></section>
-            <button type="button" class="btn btn-outline-success"><span>Mas informacion</span></button>
-          </article>
-        </section>
-      </section>
-    </article>
-    <article class="oficinas" class="container text-center">
-      <h2 class="section-title2">oficinas</h2>
-      <section class="offices">
-        <section class="Spain">
-          <p class="off">Barcelona, España</p>
-          <section id="offices1"></section>
-        </section>
-        <section class="Mexico">
-          <p class="off">Ciudad de Mexico, Mexico</p>
-          <section id="offices2"></section>
-        </section>
-        <section class="USA">
-          <p class="off">Los Angeles, USA</p>
-          <section id="offices3"></section>
-        </section>
-      </section>
-    </article>
+            <section class="col-md-6 mb-3">
+              <section class="card">
+                  <section class="row g-0 align-items-center">
+                      <!-- Sección de imagen -->
+                      <section class="col-md-4">
+                          <section id="img-4" class="img-left"></section>
+                      </section>
+                      <!-- Sección de texto -->
+                      <section class="col-md-8">
+                          <section class="card-body">
+                              <h5 class="card-title">Generación Oracle</h5>
+                              <p class="card-text">Sé GenO y ten una experiencia completamente única en varias áreas de Oracle, con entrenamiento y capacitación para convertirte en un agente de innovación.</p>
+                              <a href="#" class="btn btn-primary">Más información</a>
+                          </section>
+                      </section>
+                  </section>
+              </section>
+          </section>
+              
+                </section>
+        </article>
 
-    <!-- Footer -->
-    <footer>
-      <section class="footer-content" >
-        <article class="logo">
-          <a href="/index.html">
-            <svg
-              width="90"
-              height="30"
-              class="logo-svg"
-              viewBox="0 0 587.93 165"
-            ></svg>
-          </a>
-        </article>
-        <article class="footer-links">
-          <ul>
-            <li>
-              <a href="./aboutUs.html">Acerca de Riot Games</a>
-            </li>
-            <li>
-              <a href="./lifeInRitot.html">Vida en Riot Games</a>
-            </li>
-            <li>
-              <a href="./socialImpact.html">Impacto social</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="./employees.html">Empleos</a>
-            </li>
-            <li>
-              <a href="./riotOffices.html">Oficinas</a>
-            </li>
-            <li><a href="#">Soporte</a></li>
-            <li><a href="#">Esports</a></li>
-          </ul>
-        </article>
-        <article class="social-media">
-          <a href="https://www.facebook.com/RiotGames/"
-            ><i class="fab fa-facebook"></i
-          ></a>
-          <a href="https://twitter.com/riotgames"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="https://www.instagram.com/riotgames/"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="https://www.youtube.com/riotgames"
-            ><i class="fab fa-youtube"></i
-          ></a>
-        </article>
-      </section>
-      <section class="footer-bottom">
-        <p>&copy; 2024 Riot Games, Inc. Todos los derechos reservados.</p>
-        <ul>
-          <li>
-            <a href="https://www.riotgames.com/es/privacy-notice-ES"
-              >Política de privacidad</a
-            >
-          </li>
-          <li>
-            <a href="https://www.riotgames.com/es/terms-of-service-ES"
-              >Términos de servicio</a
-            >
-          </li>
-          <li>
-            <a href="https://www.riotgames.com/es/asistencia-al-jugador"
-              >Asitencia al juador</a
-            >
-          </li>
-        </ul>
-      </section>
-    </footer>
-    <script src="../main.js"></script>
-  </body>
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Aplicar Hoy</h2>
+            <p class="text-center">¿Listo para unirte a nosotros? Haga clic en el botón a continuación para explorar las posiciones abiertas.</p>
+            <section class="text-center">
+                <a href="#" class="btn btn-lg btn-success">Ver posiciones abiertas</a>
+            </section>
+        </section>
+
+        <footer id="footer" class="footer light-background">
+            <section class="container footer-top">
+              <section class="row gy-4">
+                <section class="col-lg-5 col-md-12 footer-about">
+                  <a href="index.html" class="logo d-flex align-items-center">
+                    <span class="sitename">Oracle</span>
+                  </a>
+                  <p>
+                    Oracle apoya a organizaciones de todos los tamaños a mejorar la
+                    eficiencia, la innovación y la toma de decisiones basadas en
+                    datos. Fundada en 1977.
+                  </p>
+                  <section class="social-links d-flex mt-4">
+                    <a href="https://x.com/oracle?lang=es"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.facebook.com/Oracle"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/oracle/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://pe.linkedin.com/company/oracle"><i class="bi bi-linkedin"></i></a>
+                  </section>
+                </section>
+      
+                <section class="col-lg-2 col-6 footer-links">
+                  <h4>Compañia</h4>
+                  <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="../templates/aboutUs.html">Quienes somos</a></li>
+                    <li><a href="../templates/resources.html">Recursos</a></li>
+                    <li><a href="../templates/news.html">Noticias</a></li>
+                    <li><a href="../templates/employees.html">Empleos</a></li>
+                    <li>
+                      <a href="../templates/social-impact.html">Impacto Social</a>
+                    </li>
+                  </ul>
+                </section>
+      
+                <section class="col-lg-2 col-6 footer-links">
+                  <h4>Nuestros Servicios</h4>
+                  <ul>
+                    <li>
+                      <a href="https://www.oracle.com/customer-success/">Oracle Security Services</a>
+                    </li>
+                    <li>
+                      <a href="https://www.oracle.com/customer-success/">Oracle Blockchain</a>
+                    </li>
+                    <li>
+                      <a href="https://www.oracle.com/customer-success/">Oracle AI</a>
+                    </li>
+                    <li>
+                      <a href="https://www.oracle.com/customer-success/">Oracle Database Services</a>
+                    </li>
+                    <li>
+                      <a href="https://www.oracle.com/customer-success/">Oracle Analytics</a>
+                    </li>
+                  </ul>
+                </section>
+      
+                <section class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                  <h4>Contactanos</h4>
+                  <p>Av. El Derby 055 Piso 5 Of. 502</p>
+                  <p>Centro de Negocios Cronos Torre 1</p>
+                  <p>Lima, Perú</p>
+                  <p class="mt-4">
+                    <strong>Teléfono:</strong> <span>+51 1 615 1047</span>
+                  </p>
+                  <p><strong>Correo:</strong> <span>oracle.peru@gmail.com</span></p>
+                </section>
+              </section>
+            </section>
+      
+            <section class="container copyright text-center mt-4">
+              <p>
+                © <span>Copyright</span>
+                <strong class="px-1 sitename">Oracle 2024</strong>
+                <span>Todos los derechos reservados</span>
+              </p>
+            </section>
+          </footer>
+    
+
+    
+</body>
 </html>
